@@ -10,6 +10,7 @@ import com.comment.Repository.UserRepository;
 import com.comment.Service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -26,6 +27,9 @@ public class PostServiceImpl implements PostService {
 
     @Autowired
     private CommentRepository commentRepository;
+
+
+    @Transactional
     @Override
     public Post savePost(Post post, String username) {
         if (post == null)
