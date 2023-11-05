@@ -8,6 +8,7 @@ import com.comment.Repository.UserRepository;
 import com.comment.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -17,12 +18,11 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
-
-    private PostRepository postRepository;
-
     @Autowired
     private CommentRepository commentRepository;
 
+
+    @Transactional
     @Override
     public User saveUser(User user) {
         if (user == null)

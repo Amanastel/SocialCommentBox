@@ -12,6 +12,7 @@ import com.comment.Repository.UserRepository;
 import com.comment.Service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -26,6 +27,8 @@ public class CommentServiceImpl implements CommentService {
 
     @Autowired
     private CommentRepository commentRepository;
+
+    @Transactional
     @Override
     public Comment saveComment(Comment comment, String username, Long postId) {
         Post post = postRepository.findById(postId).orElseThrow(() -> new PostException("Post not found"));
