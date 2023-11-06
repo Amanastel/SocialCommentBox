@@ -35,9 +35,8 @@ Social Comment Box is a Spring Boot application that allows users to create, man
 To get started with the Social Comment Box project, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/Amanastel/SocialCommentBox.git`
-2. Make sure you have Java 17 and Maven installed.
-3. Set up a PostgreSQL database and update the application.properties file with your database configuration.
-4. Build and run the project: `mvn spring-boot:run`
+2. Set up a PostgreSQL database and update the application.properties file with your database configuration.
+3. Build and run the project: `mvn spring-boot:run`
 
 ## Usage
 
